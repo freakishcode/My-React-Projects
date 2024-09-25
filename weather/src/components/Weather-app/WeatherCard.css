@@ -1,0 +1,82 @@
+.weather-app {
+  width: 40rem;
+  height: 30rem;
+
+  margin: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1.5rem;
+  cursor: pointer;
+
+  background-color: #1c1f2b;
+  border-radius: 10px;
+
+  box-shadow:
+    1px 1px 20px 1px #ff0,
+    -1px -1px 20px 1px #f0f;
+
+  P {
+    font-size: 1.6rem;
+  }
+
+  h1 {
+    font-size: 6rem;
+  }
+
+  .description {
+    position: relative;
+    right: -90%;
+    rotate: 269deg;
+    transform-origin: 0 0;
+  }
+
+  .top {
+    margin: 1rem;
+    /* background-color: red; */
+  }
+
+  .bottom {
+    margin: 1rem auto;
+    display: flex;
+    justify-content: space-evenly;
+    flex-wrap: wrap;
+    padding: 1rem;
+    border-radius: 12px;
+    width: 90%;
+    text-align: center;
+    background: rgba(225, 225, 225, 0.2);
+  }
+
+  .feel,
+  .humidity,
+  .wind,
+  .location,
+  .temp,
+  .description {
+    background: var(--gradient);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+
+  .wind-NPM {
+    font-weight: 700;
+  }
+}
+
+@media (max-width: 60rem) {
+  .weather-app {
+    width: 70vw;
+    height: 70dvh;
+    gap: 0.55rem;
+
+    h1 {
+      font-size: 4rem;
+    }
+  }
+
+  .bottom {
+    margin: 0.33rem auto;
+  }
+}
